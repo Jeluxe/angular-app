@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     styleUrls: ['./a-comp.component.css']
 })
 export class ACompComponent implements OnInit {
+    list;
     constructor(private router: Router, private route: ActivatedRoute) {
         this.router = router;
     }
@@ -19,6 +20,6 @@ export class ACompComponent implements OnInit {
     }
 
     test() {
-
+        this.list
     }
 }
