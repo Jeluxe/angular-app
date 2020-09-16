@@ -22,7 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         FormsModule,
         RouterModule.forRoot([
             { path: 'a', component: ACompComponent },
-            { path: 'b/:name', component: BCompComponent },
+            { path: 'country/:name', component: BCompComponent },
             { path: 'b', component: BCompComponent },
             { path: '**', component: NotFoundComponent }
         ])

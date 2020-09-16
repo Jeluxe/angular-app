@@ -17,8 +17,4 @@ export class ACompComponent implements OnInit {
     goToPage() {
         this.router.navigate(['/b', 'zvi']);
     }
-
-    test() {
-
-    }
 }
