@@ -8,13 +8,19 @@ import { ACompComponent } from './a-comp/a-comp.component';
 import { BCompComponent } from './b-comp/b-comp.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CategoryComponentComponent } from './category-component/category-component.component';
+import { GameComponentComponent } from './game-component/game-component.component';
+import { CommentComponentComponent } from './comment-component/comment-component.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ACompComponent,
         BCompComponent,
-        NotFoundComponent
+        NotFoundComponent,
+        CategoryComponentComponent,
+        GameComponentComponent,
+        CommentComponentComponent
     ],
     imports: [
         BrowserModule,
