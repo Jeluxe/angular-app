@@ -8,9 +8,9 @@ import { ACompComponent } from './a-comp/a-comp.component';
 import { BCompComponent } from './b-comp/b-comp.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { CategoryComponentComponent } from './category-component/category-component.component';
-import { GameComponentComponent } from './game-component/game-component.component';
-import { CommentComponentComponent } from './comment-component/comment-component.component';
+import { CategoryComponent } from './category/category.component';
+import { GameComponent } from './game/game.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
     declarations: [
@@ -18,19 +18,20 @@ import { CommentComponentComponent } from './comment-component/comment-component
         ACompComponent,
         BCompComponent,
         NotFoundComponent,
-        CategoryComponentComponent,
-        GameComponentComponent,
-        CommentComponentComponent
+        CategoryComponent,
+        GameComponent,
+        CommentComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: 'a', component: ACompComponent },
+            // { path: 'a', component: ACompComponent },
             { path: 'country/:name', component: BCompComponent },
-            { path: 'b', component: BCompComponent },
-            { path: '**', component: NotFoundComponent }
+            // { path: 'b', component: BCompComponent },
+            // { path: '**', component: NotFoundComponent }
+            { path: 'games/:category', component: CategoryComponent }
         ])
     ],
     providers: [],
