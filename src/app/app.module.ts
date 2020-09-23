@@ -28,10 +28,12 @@ import { CommentComponent } from './comment/comment.component';
         FormsModule,
         RouterModule.forRoot([
             // { path: 'a', component: ACompComponent },
-            { path: 'country/:name', component: BCompComponent },
+            // { path: 'country/:name', component: BCompComponent },
             // { path: 'b', component: BCompComponent },
             // { path: '**', component: NotFoundComponent }
-            { path: 'games/:category', component: CategoryComponent }
+            { path: 'games/:category', component: CategoryComponent },
+            { path: ':category/:gameID', component: GameComponent },
+            { path: 'comment', component: CommentComponent },
         ])
     ],
     providers: [],

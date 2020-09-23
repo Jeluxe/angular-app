@@ -1,1 +1,12 @@
-<p>category works!</p>
+<table>
+    <thead>
+        <th *ngFor="let game of games[0] | keyvalue">{{game.key}}</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of games" (click)="onClickMe(game.ID)">
+            <td *ngFor="let item of game | keyvalue">
+                {{item.value}}
+            </td>
+        </tr>
+    </tbody>
+</table>
