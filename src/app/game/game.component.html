@@ -1,1 +1,12 @@
 <p>game works!</p>
+<div *ngIf="gameDetails.length > 0" style="float: left;margin-right: 50px;">
+    <b> id:{{gameDetails[0][0].ID}},<br />
+        TeamA:{{gameDetails[0][0].TeamA}},<br />
+        TeamB:{{gameDetails[0][0].TeamB}},<br />
+        ScoreA:{{gameDetails[0][0].ScoreA}},<br />
+        ScoreB:{{gameDetails[0][0].ScoreB}},<br />
+        Time:{{gameDetails[0][0].Time}}</b>
+</div>
+<div style="border: 1px solid black">
+    hello
+</div>

@@ -8,17 +8,26 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CategoryComponent implements OnInit {
   route = null;
-  constructor(route: ActivatedRoute) {
+  router = null;
+  games = [];
+
+  constructor(router: Router, route: ActivatedRoute) {
     this.route = route
+    this.router = router
   }
 
   ngOnInit(): void {
     console.log(this.route.snapshot.params.category);
-    fetch(`http://localhost:4000/games/${this.route.snapshot.params.category}`)
+    fetch(`/api/games/${this.route.snapshot.params.category}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        console.log(data)
+        this.games = data;
       });
   }
 
+  onClickMe(id) {
+    console.log(id)
+    this.router.navigate([`/${this.route.snapshot.params.category}`, `${id}`])
+  }
 }
